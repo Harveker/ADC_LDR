@@ -21,7 +21,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "usb_device.h"
+#include "usbd_cdc_if.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,9 +47,9 @@ TIM_HandleTypeDef htim4;
 
 /* USER CODE BEGIN PV */
 uint32_t valorADC;
-uint32_t adc_min = 199;  // Valor do ADC correspondente a V escuro (0.16V)
-uint32_t adc_max = 3894; // Valor do ADC correspondente a V claro (3.14V)
-int nivelLed = 0;
+uint32_t adc_min = 185;  // Valor do ADC correspondente a V escuro (0.16V)
+uint32_t adc_max = 3050; // Valor do ADC correspondente a V claro (3.14V)
+uint8_t nivelLed = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -140,14 +141,17 @@ int main(void)
       // Mapeia linearmente a faixa de ADC para o número de LEDs (1 a 4)
       nivelLed = 1 + (4 * (valorADC - adc_min)) / (adc_max - adc_min);    //adcmax - adcmin = range valorADC - adcmin = valorADC com 0 deslocado pra adcmin
     }
-
+    nivelLed = valorADC/750;
+    nivelLed = (1<<nivelLed) - 1;
+    HAL_GPIO_WritePin(GPIOA, ((~nivelLed)&(0x1F))<<3,0);
+    HAL_GPIO_WritePin(GPIOA, nivelLed<<3,1);
     // Aciona os LEDs de acordo com o nível calculado
-    //HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, (nivelLed <= 1) ? GPIO_PIN_RESET : GPIO_PIN_SET); // if else compacto se não funcionar, usar switch case normal abaixo
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, (nivelLed > 1) ? GPIO_PIN_SET : GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, (nivelLed >= 2) ? GPIO_PIN_SET : GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, (nivelLed >= 3) ? GPIO_PIN_SET : GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, (nivelLed >= 4) ? GPIO_PIN_SET : GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, (nivelLed >= 5) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, (nivelLed <= 1) ? GPIO_PIN_RESET : GPIO_PIN_SET); // if else compacto se não funcionar, usar switch case normal abaixo
+    // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, (nivelLed >= 1) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, (nivelLed >= 2) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, (nivelLed >= 3) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, (nivelLed >= 4) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, (nivelLed >= 5) ? GPIO_PIN_SET : GPIO_PIN_RESET);
     /*
     switch (nivelLed)
     {
