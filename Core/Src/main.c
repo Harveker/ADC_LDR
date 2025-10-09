@@ -23,6 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include "usb_device.h"
 #include "usbd_cdc_if.h"
+#include "stdio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,6 +49,7 @@ uint32_t valorADC;
 uint32_t adc_min = 185;  // Valor do ADC correspondente a V escuro (0.16V)
 uint32_t adc_max = 3050; // Valor do ADC correspondente a V claro (3.14V)
 uint8_t nivelLed = 0;
+uint8_t buffer[255];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -199,6 +201,9 @@ int main(void)
     */
     // Pequeno delay para estabilidade da leitura
     HAL_Delay(30);
+    //ongoing----------------------------------------------------------------------
+    sprintf(buffer, "O percentual do fundo de escala do A/D eh de %d.%d% %% ,presentando uma tensao de %f mV " (valorADC/4095),(valorADC/),(valorADC*3300/4095));
+    CDC_transmit(buffer,strlen(buffer));
   }
   /* USER CODE END 3 */
 }
