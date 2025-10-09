@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 1
+ARM GAS  /tmp/ccCiip5m.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 1
   28:Core/Src/stm32f4xx_it.c **** /* USER CODE BEGIN TD */
   29:Core/Src/stm32f4xx_it.c **** 
   30:Core/Src/stm32f4xx_it.c **** /* USER CODE END TD */
-ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 2
+ARM GAS  /tmp/ccCiip5m.s 			page 2
 
 
   31:Core/Src/stm32f4xx_it.c **** 
@@ -88,7 +88,7 @@ ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 1
   55:Core/Src/stm32f4xx_it.c **** /* USER CODE END 0 */
   56:Core/Src/stm32f4xx_it.c **** 
   57:Core/Src/stm32f4xx_it.c **** /* External variables --------------------------------------------------------*/
-  58:Core/Src/stm32f4xx_it.c **** 
+  58:Core/Src/stm32f4xx_it.c **** extern PCD_HandleTypeDef hpcd_USB_OTG_FS;
   59:Core/Src/stm32f4xx_it.c **** /* USER CODE BEGIN EV */
   60:Core/Src/stm32f4xx_it.c **** 
   61:Core/Src/stm32f4xx_it.c **** /* USER CODE END EV */
@@ -113,15 +113,15 @@ ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 1
   73:Core/Src/stm32f4xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 0 */
   74:Core/Src/stm32f4xx_it.c ****   /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
   75:Core/Src/stm32f4xx_it.c ****    while (1)
-  36              		.loc 1 75 4 view .LVU1
+  36              		.loc 1 75 4 discriminator 1 view .LVU1
   76:Core/Src/stm32f4xx_it.c ****   {
   77:Core/Src/stm32f4xx_it.c ****   }
-  37              		.loc 1 77 3 view .LVU2
+  37              		.loc 1 77 3 discriminator 1 view .LVU2
   75:Core/Src/stm32f4xx_it.c ****   {
-ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 3
+ARM GAS  /tmp/ccCiip5m.s 			page 3
 
 
-  38              		.loc 1 75 10 view .LVU3
+  38              		.loc 1 75 10 discriminator 1 view .LVU3
   39 0000 FEE7     		b	.L2
   40              		.cfi_endproc
   41              	.LFE220:
@@ -152,14 +152,14 @@ ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 1
   87:Core/Src/stm32f4xx_it.c **** 
   88:Core/Src/stm32f4xx_it.c ****   /* USER CODE END HardFault_IRQn 0 */
   89:Core/Src/stm32f4xx_it.c ****   while (1)
-  59              		.loc 1 89 3 view .LVU5
+  59              		.loc 1 89 3 discriminator 1 view .LVU5
   90:Core/Src/stm32f4xx_it.c ****   {
   91:Core/Src/stm32f4xx_it.c ****     /* USER CODE BEGIN W1_HardFault_IRQn 0 */
   92:Core/Src/stm32f4xx_it.c ****     /* USER CODE END W1_HardFault_IRQn 0 */
   93:Core/Src/stm32f4xx_it.c ****   }
-  60              		.loc 1 93 3 view .LVU6
+  60              		.loc 1 93 3 discriminator 1 view .LVU6
   89:Core/Src/stm32f4xx_it.c ****   {
-  61              		.loc 1 89 9 view .LVU7
+  61              		.loc 1 89 9 discriminator 1 view .LVU7
   62 0000 FEE7     		b	.L4
   63              		.cfi_endproc
   64              	.LFE221:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 1
   98:Core/Src/stm32f4xx_it.c ****   */
   99:Core/Src/stm32f4xx_it.c **** void MemManage_Handler(void)
  100:Core/Src/stm32f4xx_it.c **** {
-ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 4
+ARM GAS  /tmp/ccCiip5m.s 			page 4
 
 
   75              		.loc 1 100 1 view -0
@@ -192,14 +192,14 @@ ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 1
  102:Core/Src/stm32f4xx_it.c **** 
  103:Core/Src/stm32f4xx_it.c ****   /* USER CODE END MemoryManagement_IRQn 0 */
  104:Core/Src/stm32f4xx_it.c ****   while (1)
-  82              		.loc 1 104 3 view .LVU9
+  82              		.loc 1 104 3 discriminator 1 view .LVU9
  105:Core/Src/stm32f4xx_it.c ****   {
  106:Core/Src/stm32f4xx_it.c ****     /* USER CODE BEGIN W1_MemoryManagement_IRQn 0 */
  107:Core/Src/stm32f4xx_it.c ****     /* USER CODE END W1_MemoryManagement_IRQn 0 */
  108:Core/Src/stm32f4xx_it.c ****   }
-  83              		.loc 1 108 3 view .LVU10
+  83              		.loc 1 108 3 discriminator 1 view .LVU10
  104:Core/Src/stm32f4xx_it.c ****   {
-  84              		.loc 1 104 9 view .LVU11
+  84              		.loc 1 104 9 discriminator 1 view .LVU11
   85 0000 FEE7     		b	.L6
   86              		.cfi_endproc
   87              	.LFE222:
@@ -229,16 +229,16 @@ ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 1
  117:Core/Src/stm32f4xx_it.c **** 
  118:Core/Src/stm32f4xx_it.c ****   /* USER CODE END BusFault_IRQn 0 */
  119:Core/Src/stm32f4xx_it.c ****   while (1)
- 105              		.loc 1 119 3 view .LVU13
+ 105              		.loc 1 119 3 discriminator 1 view .LVU13
  120:Core/Src/stm32f4xx_it.c ****   {
  121:Core/Src/stm32f4xx_it.c ****     /* USER CODE BEGIN W1_BusFault_IRQn 0 */
  122:Core/Src/stm32f4xx_it.c ****     /* USER CODE END W1_BusFault_IRQn 0 */
  123:Core/Src/stm32f4xx_it.c ****   }
- 106              		.loc 1 123 3 view .LVU14
+ 106              		.loc 1 123 3 discriminator 1 view .LVU14
  119:Core/Src/stm32f4xx_it.c ****   {
- 107              		.loc 1 119 9 view .LVU15
+ 107              		.loc 1 119 9 discriminator 1 view .LVU15
  108 0000 FEE7     		b	.L8
-ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 5
+ARM GAS  /tmp/ccCiip5m.s 			page 5
 
 
  109              		.cfi_endproc
@@ -269,14 +269,14 @@ ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 1
  132:Core/Src/stm32f4xx_it.c **** 
  133:Core/Src/stm32f4xx_it.c ****   /* USER CODE END UsageFault_IRQn 0 */
  134:Core/Src/stm32f4xx_it.c ****   while (1)
- 128              		.loc 1 134 3 view .LVU17
+ 128              		.loc 1 134 3 discriminator 1 view .LVU17
  135:Core/Src/stm32f4xx_it.c ****   {
  136:Core/Src/stm32f4xx_it.c ****     /* USER CODE BEGIN W1_UsageFault_IRQn 0 */
  137:Core/Src/stm32f4xx_it.c ****     /* USER CODE END W1_UsageFault_IRQn 0 */
  138:Core/Src/stm32f4xx_it.c ****   }
- 129              		.loc 1 138 3 view .LVU18
+ 129              		.loc 1 138 3 discriminator 1 view .LVU18
  134:Core/Src/stm32f4xx_it.c ****   {
- 130              		.loc 1 134 9 view .LVU19
+ 130              		.loc 1 134 9 discriminator 1 view .LVU19
  131 0000 FEE7     		b	.L10
  132              		.cfi_endproc
  133              	.LFE224:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 1
  144              		.loc 1 145 1 view -0
  145              		.cfi_startproc
  146              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 6
+ARM GAS  /tmp/ccCiip5m.s 			page 6
 
 
  147              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 1
  169:Core/Src/stm32f4xx_it.c ****   */
  170:Core/Src/stm32f4xx_it.c **** void PendSV_Handler(void)
  171:Core/Src/stm32f4xx_it.c **** {
-ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 7
+ARM GAS  /tmp/ccCiip5m.s 			page 7
 
 
  182              		.loc 1 171 1 view -0
@@ -415,35 +415,96 @@ ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 1
  214 0006 08BD     		pop	{r3, pc}
  215              		.cfi_endproc
  216              	.LFE228:
- 218              		.text
- 219              	.Letext0:
- 220              		.file 2 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
-ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 8
+ 218              		.section	.text.OTG_FS_IRQHandler,"ax",%progbits
+ 219              		.align	1
+ 220              		.global	OTG_FS_IRQHandler
+ARM GAS  /tmp/ccCiip5m.s 			page 8
 
 
-ARM GAS  C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s 			page 9
+ 221              		.syntax unified
+ 222              		.thumb
+ 223              		.thumb_func
+ 225              	OTG_FS_IRQHandler:
+ 226              	.LFB229:
+ 193:Core/Src/stm32f4xx_it.c **** 
+ 194:Core/Src/stm32f4xx_it.c **** /******************************************************************************/
+ 195:Core/Src/stm32f4xx_it.c **** /* STM32F4xx Peripheral Interrupt Handlers                                    */
+ 196:Core/Src/stm32f4xx_it.c **** /* Add here the Interrupt Handlers for the used peripherals.                  */
+ 197:Core/Src/stm32f4xx_it.c **** /* For the available peripheral interrupt handler names,                      */
+ 198:Core/Src/stm32f4xx_it.c **** /* please refer to the startup file (startup_stm32f4xx.s).                    */
+ 199:Core/Src/stm32f4xx_it.c **** /******************************************************************************/
+ 200:Core/Src/stm32f4xx_it.c **** 
+ 201:Core/Src/stm32f4xx_it.c **** /**
+ 202:Core/Src/stm32f4xx_it.c ****   * @brief This function handles USB On The Go FS global interrupt.
+ 203:Core/Src/stm32f4xx_it.c ****   */
+ 204:Core/Src/stm32f4xx_it.c **** void OTG_FS_IRQHandler(void)
+ 205:Core/Src/stm32f4xx_it.c **** {
+ 227              		.loc 1 205 1 is_stmt 1 view -0
+ 228              		.cfi_startproc
+ 229              		@ args = 0, pretend = 0, frame = 0
+ 230              		@ frame_needed = 0, uses_anonymous_args = 0
+ 231 0000 08B5     		push	{r3, lr}
+ 232              	.LCFI1:
+ 233              		.cfi_def_cfa_offset 8
+ 234              		.cfi_offset 3, -8
+ 235              		.cfi_offset 14, -4
+ 206:Core/Src/stm32f4xx_it.c ****   /* USER CODE BEGIN OTG_FS_IRQn 0 */
+ 207:Core/Src/stm32f4xx_it.c **** 
+ 208:Core/Src/stm32f4xx_it.c ****   /* USER CODE END OTG_FS_IRQn 0 */
+ 209:Core/Src/stm32f4xx_it.c ****   HAL_PCD_IRQHandler(&hpcd_USB_OTG_FS);
+ 236              		.loc 1 209 3 view .LVU30
+ 237 0002 0248     		ldr	r0, .L18
+ 238 0004 FFF7FEFF 		bl	HAL_PCD_IRQHandler
+ 239              	.LVL1:
+ 210:Core/Src/stm32f4xx_it.c ****   /* USER CODE BEGIN OTG_FS_IRQn 1 */
+ 211:Core/Src/stm32f4xx_it.c **** 
+ 212:Core/Src/stm32f4xx_it.c ****   /* USER CODE END OTG_FS_IRQn 1 */
+ 213:Core/Src/stm32f4xx_it.c **** }
+ 240              		.loc 1 213 1 is_stmt 0 view .LVU31
+ 241 0008 08BD     		pop	{r3, pc}
+ 242              	.L19:
+ 243 000a 00BF     		.align	2
+ 244              	.L18:
+ 245 000c 00000000 		.word	hpcd_USB_OTG_FS
+ 246              		.cfi_endproc
+ 247              	.LFE229:
+ 249              		.text
+ 250              	.Letext0:
+ 251              		.file 2 "/opt/arm-gnu-toolchain-12.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_defa
+ 252              		.file 3 "/opt/arm-gnu-toolchain-12.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h
+ 253              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
+ 254              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 255              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h"
+ 256              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h"
+ 257              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ARM GAS  /tmp/ccCiip5m.s 			page 9
 
 
 DEFINED SYMBOLS
-                            *ABS*:00000000 stm32f4xx_it.c
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:21     .text.NMI_Handler:00000000 $t
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:27     .text.NMI_Handler:00000000 NMI_Handler
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:44     .text.HardFault_Handler:00000000 $t
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:50     .text.HardFault_Handler:00000000 HardFault_Handler
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:67     .text.MemManage_Handler:00000000 $t
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:73     .text.MemManage_Handler:00000000 MemManage_Handler
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:90     .text.BusFault_Handler:00000000 $t
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:96     .text.BusFault_Handler:00000000 BusFault_Handler
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:113    .text.UsageFault_Handler:00000000 $t
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:119    .text.UsageFault_Handler:00000000 UsageFault_Handler
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:136    .text.SVC_Handler:00000000 $t
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:142    .text.SVC_Handler:00000000 SVC_Handler
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:155    .text.DebugMon_Handler:00000000 $t
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:161    .text.DebugMon_Handler:00000000 DebugMon_Handler
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:174    .text.PendSV_Handler:00000000 $t
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:180    .text.PendSV_Handler:00000000 PendSV_Handler
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:193    .text.SysTick_Handler:00000000 $t
-C:\Users\HOTEL-~1\AppData\Local\Temp\cc6tMS5E.s:199    .text.SysTick_Handler:00000000 SysTick_Handler
+                            *ABS*:0000000000000000 stm32f4xx_it.c
+     /tmp/ccCiip5m.s:21     .text.NMI_Handler:0000000000000000 $t
+     /tmp/ccCiip5m.s:27     .text.NMI_Handler:0000000000000000 NMI_Handler
+     /tmp/ccCiip5m.s:44     .text.HardFault_Handler:0000000000000000 $t
+     /tmp/ccCiip5m.s:50     .text.HardFault_Handler:0000000000000000 HardFault_Handler
+     /tmp/ccCiip5m.s:67     .text.MemManage_Handler:0000000000000000 $t
+     /tmp/ccCiip5m.s:73     .text.MemManage_Handler:0000000000000000 MemManage_Handler
+     /tmp/ccCiip5m.s:90     .text.BusFault_Handler:0000000000000000 $t
+     /tmp/ccCiip5m.s:96     .text.BusFault_Handler:0000000000000000 BusFault_Handler
+     /tmp/ccCiip5m.s:113    .text.UsageFault_Handler:0000000000000000 $t
+     /tmp/ccCiip5m.s:119    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
+     /tmp/ccCiip5m.s:136    .text.SVC_Handler:0000000000000000 $t
+     /tmp/ccCiip5m.s:142    .text.SVC_Handler:0000000000000000 SVC_Handler
+     /tmp/ccCiip5m.s:155    .text.DebugMon_Handler:0000000000000000 $t
+     /tmp/ccCiip5m.s:161    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
+     /tmp/ccCiip5m.s:174    .text.PendSV_Handler:0000000000000000 $t
+     /tmp/ccCiip5m.s:180    .text.PendSV_Handler:0000000000000000 PendSV_Handler
+     /tmp/ccCiip5m.s:193    .text.SysTick_Handler:0000000000000000 $t
+     /tmp/ccCiip5m.s:199    .text.SysTick_Handler:0000000000000000 SysTick_Handler
+     /tmp/ccCiip5m.s:219    .text.OTG_FS_IRQHandler:0000000000000000 $t
+     /tmp/ccCiip5m.s:225    .text.OTG_FS_IRQHandler:0000000000000000 OTG_FS_IRQHandler
+     /tmp/ccCiip5m.s:245    .text.OTG_FS_IRQHandler:000000000000000c $d
 
 UNDEFINED SYMBOLS
 HAL_IncTick
+HAL_PCD_IRQHandler
+hpcd_USB_OTG_FS
