@@ -162,13 +162,12 @@ int main(void)
     // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, (nivelLed >= 5) ? GPIO_PIN_SET : GPIO_PIN_RESET);
 
     // Pequeno delay para estabilidade da leitura
-    HAL_Delay(30);
     // ongoing----------------------------------------------------------------------
     if (gUSBRxBuffer[0] != 0)
     {
       if ((gUSBRxBuffer[0] == 80 ) || (gUSBRxBuffer[0] == 37))
       {
-        sprintf(buffer, "O percentual do fundo de escala do A/D eh de %lu.%lu% %%,apresentando uma tensao de %lu mV ", (valorADC * 100 / 4095), (((valorADC * 10000) / 4095) % 100), (valorADC * 3300 / 4095));
+        sprintf(buffer, "O percentual do fundo de escala do A/D eh de %lu.%lu% %%,apresentando uma tensao de %lu mV\r\n", (valorADC * 100 / 4095), (((valorADC * 10000) / 4095) % 100), (valorADC * 3300 / 4095));
         CDC_Transmit_FS(buffer, strlen(buffer));
         gUSBRxBuffer[0] = 0;
       }
@@ -176,14 +175,14 @@ int main(void)
       {
         if (htim3.Instance->CCR1 < MAX_PWM - STEP_PWM)
         {
-          sprintf(buffer, "Duty Cycle atual: %lu%%\n", htim3.Instance->CCR1);
+          sprintf(buffer, "Duty Cycle atual: %lu\r\n", htim3.Instance->CCR1);
           CDC_Transmit_FS(buffer, strlen(buffer));
           htim3.Instance->CCR1 += STEP_PWM;
           gUSBRxBuffer[0] = 0;
         }
         else
         {
-          sprintf(buffer, "Duty Cycle atual: 100%%\n");
+          sprintf(buffer, "Duty Cycle atual: 100%%\r\n");
           CDC_Transmit_FS(buffer, strlen(buffer));
           htim3.Instance->CCR1 = MAX_PWM;
           gUSBRxBuffer[0] = 0;
@@ -193,14 +192,14 @@ int main(void)
       {
         if (htim3.Instance->CCR1 > MIN_PWM + STEP_PWM)
         {
-          sprintf(buffer, "Duty Cycle atual: %lu%%\n", htim3.Instance->CCR1);
+          sprintf(buffer, "Duty Cycle atual: %lu\r\n", htim3.Instance->CCR1);
           CDC_Transmit_FS(buffer, strlen(buffer));
           htim3.Instance->CCR1 -= STEP_PWM;
           gUSBRxBuffer[0] = 0;
         }
         else
         {
-          sprintf(buffer, "Duty Cycle atual: 0%%\n");
+          sprintf(buffer, "Duty Cycle atual: 0%%\r\n");
           CDC_Transmit_FS(buffer, strlen(buffer));
           htim3.Instance->CCR1 = MIN_PWM;
           gUSBRxBuffer[0] = 0;
