@@ -176,11 +176,15 @@ int main(void)
       {
         if (htim3.Instance->CCR1 < MAX_PWM - STEP_PWM)
         {
+          sprintf(buffer, "Duty Cycle atual: %lu%%\n", htim3.Instance->CCR1);
+          CDC_Transmit_FS(buffer, strlen(buffer));
           htim3.Instance->CCR1 += STEP_PWM;
           gUSBRxBuffer[0] = 0;
         }
         else
         {
+          sprintf(buffer, "Duty Cycle atual: 100%%\n");
+          CDC_Transmit_FS(buffer, strlen(buffer));
           htim3.Instance->CCR1 = MAX_PWM;
           gUSBRxBuffer[0] = 0;
         }
@@ -189,11 +193,15 @@ int main(void)
       {
         if (htim3.Instance->CCR1 > MIN_PWM + STEP_PWM)
         {
+          sprintf(buffer, "Duty Cycle atual: %lu%%\n", htim3.Instance->CCR1);
+          CDC_Transmit_FS(buffer, strlen(buffer));
           htim3.Instance->CCR1 -= STEP_PWM;
           gUSBRxBuffer[0] = 0;
         }
         else
         {
+          sprintf(buffer, "Duty Cycle atual: 0%%\n");
+          CDC_Transmit_FS(buffer, strlen(buffer));
           htim3.Instance->CCR1 = MIN_PWM;
           gUSBRxBuffer[0] = 0;
         }
