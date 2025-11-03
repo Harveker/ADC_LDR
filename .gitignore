@@ -1,0 +1,66 @@
+# Build artifacts
+build/
+*.o
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+*.su
+*.d
+
+# IDE and editor files
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment and local configuration
+.env
+.env.local
+*.local
+
+# Debugging files
+*.log
+*.dmp
+core
+
+# Personal notes and temporary files
+notes.txt
+todo.txt
+scratch/
+temp/
+tmp/
+
+# OS generated files
+Thumbs.db
+.DS_Store
+._*
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Compiled Object files
+*.slo
+*.lo
+*.ko
+*.obj
+
+# Libraries
+*.lib
+*.a
+*.la
+
+# Shared objects
+*.dll
+*.so
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
